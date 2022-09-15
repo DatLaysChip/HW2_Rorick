@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HW2_Rorick_FizzBuzz
+namespace HW2_Rorick_FizzBuzz_
 {
     internal class Program
     {
@@ -14,37 +14,40 @@ namespace HW2_Rorick_FizzBuzz
             int conversion;
             //Variable Declaration
 
-            Console.WriteLine("Please enter your lucky number!");
+            Console.WriteLine("Please input your lucky number!");
             LuckyNumber = Console.ReadLine();
-
-
+            //User Input
 
             if (int.TryParse(LuckyNumber, out conversion))
             {
                 if (conversion % 3 == 0 && conversion % 5 != 0)
                 {
                     Console.WriteLine($"{conversion} Fizz");
-                }//If is divisible by 3 only
+                }//If divisible by 3 only
 
                 else if (conversion % 3 != 0 && conversion % 5 == 0)
                 {
                     Console.WriteLine($"{conversion} Buzz");
-                }//If is disible by 5 only
+                }//If divisible by 5 only
 
                 else if (conversion % 3 == 0 && conversion % 5 == 0)
                 {
                     Console.WriteLine($"{conversion} FizzBuzz");
-                }//If is disible by both 3 & 5
+                }//If divisible by 3 & 5
 
                 else
                 {
-                    Console.WriteLine("I'm sorry, but you have entered an invalid number.\nPlease try again.");
-                }
+                    Console.WriteLine(conversion);
+                }//If not divisible by 3 or 5
+            }
             else
             {
-
-             }
+                Console.WriteLine("An invalid input has been detected. \nPlease try again.");
             }
+            //Conditional whether UserInput is valid or not
+            //Output
+
+            Console.ReadKey();
         }
     }
 }

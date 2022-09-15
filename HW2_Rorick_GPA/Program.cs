@@ -163,7 +163,7 @@ namespace HW2_Rorick_GPA
             }
             //MIS number grade to letter grade
 
-            GPA = (MrkPnt + EconPnt + AcctPnt + MISPnt) / 4;
+            GPA = (MrkPnt + EconPnt + AcctPnt + MISPnt) / 12;
 
 
 
@@ -173,7 +173,7 @@ namespace HW2_Rorick_GPA
             Console.WriteLine($"Your letter grade for Accounting is {AcctLett}.");
             Console.WriteLine($"Your letter grade for Economics is {EconLett}.");
             Console.WriteLine($"Your letter grade for MIS is {MISLett}.");
-            Console.WriteLine($"Your overall GPA for the semester is {GPA}.");
+            Console.WriteLine($"Your overall GPA for the semester is {GPA.ToString("N2")}.");
            
             //outputs
 
